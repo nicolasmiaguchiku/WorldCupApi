@@ -7,7 +7,6 @@
 
     public class Settings : ISettings
     {
-
         public required WorldCupSettings WorldCupSettings { get; set; }
     }
 }
