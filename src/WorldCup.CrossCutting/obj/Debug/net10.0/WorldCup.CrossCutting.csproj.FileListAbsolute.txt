@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\bin\Debug\net10.0\WorldCup.CrossCutting.deps.json
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\bin\Debug\net10.0\WorldCup.CrossCutting.dll
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\bin\Debug\net10.0\WorldCup.CrossCutting.pdb
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.AssemblyInfo.cs
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.sourcelink.json
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.dll
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\refint\WorldCup.CrossCutting.dll
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\WorldCup.CrossCutting.pdb
+C:\Users\User\source\repos\WorldCupApi\src\WorldCup.CrossCutting\obj\Debug\net10.0\ref\WorldCup.CrossCutting.dll

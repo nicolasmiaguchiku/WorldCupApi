@@ -1,2 +1,18 @@
 <Solution>
+  <Folder Name="/Adapters/" />
+  <Folder Name="/Adapters/Input/">
+    <Project Path="WorldCup.Api/WorldCup.Api.csproj" />
+  </Folder>
+  <Folder Name="/Adapters/Output/">
+    <Project Path="WorldCup.Infrastructure/WorldCup.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Core/">
+    <Project Path="WorldCup.Domain/WorldCup.Domain.csproj" />
+  </Folder>
+  <Folder Name="/IoC/">
+    <Project Path="WorldCup.CrossCutting/WorldCup.CrossCutting.csproj" />
+  </Folder>
+  <Folder Name="/Ports/">
+    <Project Path="WorldCup.Application/WorldCup.Application.csproj" />
+  </Folder>
 </Solution>
