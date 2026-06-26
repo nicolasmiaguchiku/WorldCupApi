@@ -1,6 +1,16 @@
 using WorldCup.CrossCutting.Extensions;
+using WorldCup.CrossCutting.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var enviroment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{enviroment}.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+Settings applicationSettings = builder.Configuration.GetApplicationSettings(builder.Environment);
 
 builder.Services
     .AddApiSpecification()
