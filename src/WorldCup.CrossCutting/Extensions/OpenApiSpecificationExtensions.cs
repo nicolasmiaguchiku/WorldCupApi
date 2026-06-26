@@ -43,7 +43,7 @@ namespace WorldCup.CrossCutting.Extensions
                 options.HideSearch = true;
                 options.Servers = [];
 
-                options.WithTitle("Wallet - Manager | Reference");
+                options.WithTitle("World Cup | Reference");
                 options.WithClassicLayout();
                 options.ExpandAllTags();
             });
