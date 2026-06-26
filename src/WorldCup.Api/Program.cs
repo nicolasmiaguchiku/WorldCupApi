@@ -14,6 +14,7 @@ Settings applicationSettings = builder.Configuration.GetApplicationSettings(buil
 
 builder.Services
     .AddApiSpecification()
+    .AddHttpClients(applicationSettings.WorldCupSettings)
     .AddControllers();
 
 builder.Services.AddOpenApi();
