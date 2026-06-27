@@ -3,7 +3,7 @@ using WorldCup.CrossCutting.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var enviroment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+string? enviroment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -13,6 +13,8 @@ builder.Configuration
 Settings applicationSettings = builder.Configuration.GetApplicationSettings(builder.Environment);
 
 builder.Services
+    .AddServices()
+    .AddMediator()
     .AddApiSpecification()
     .AddHttpClients(applicationSettings.WorldCupSettings)
     .AddControllers();

@@ -20,7 +20,7 @@ namespace WorldCup.CrossCutting.Extensions
 
         private static string GetOrDefault(string key, string? fallback)
         {
-            var value = Environment.GetEnvironmentVariable(key);
+            string? value = Environment.GetEnvironmentVariable(key);
             return string.IsNullOrEmpty(value) ? fallback ?? "" : value;
         }
     }

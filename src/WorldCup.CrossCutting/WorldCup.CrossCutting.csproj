@@ -7,11 +7,19 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="LiteBus.Commands.Extensions.MicrosoftDependencyInjection" Version="3.1.0" />
+		<PackageReference Include="LiteBus.Messaging.Extensions.MicrosoftDependencyInjection" Version="3.1.0" />
+		<PackageReference Include="LiteBus.Queries.Extensions.MicrosoftDependencyInjection" Version="3.1.0" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.9" />
 		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.9" />
 		<PackageReference Include="Scalar.AspNetCore" Version="2.13.15" />
 		<PackageReference Include="Scalar.AspNetCore.Microsoft" Version="2.13.15" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WorldCup.Application\WorldCup.Application.csproj" />
+	  <ProjectReference Include="..\WorldCup.Infrastructure\WorldCup.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>
