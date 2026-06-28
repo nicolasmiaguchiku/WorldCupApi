@@ -1,3 +1,4 @@
+using WorldCup.Application.Jobs;
 using WorldCup.CrossCutting.Extensions;
 using WorldCup.CrossCutting.Models;
 
@@ -15,6 +16,7 @@ Settings applicationSettings = builder.Configuration.GetApplicationSettings(buil
 builder.Services
     .AddServices()
     .AddMediator()
+    .AddHostedService<UpdateCacheJob>()
     .AddMemoryCacheService()
     .AddApiSpecification()
     .AddHttpClients(applicationSettings.WorldCupSettings)

@@ -8,18 +8,19 @@ namespace WorldCup.Application.UseCases.Queries
     {
         public async Task<Result<MatchesResponse>> HandleAsync(GetMatchesQuery message, CancellationToken cancellationToken = default)
         {
-            Result<MatchesResponse>? matches;
+            Result<MatchesResponse> matchesService;
+            MatchesResponse? matchesCache;
 
-            matches = MemoryCacheService.Get<Result<MatchesResponse>>("matchesList");
+            matchesCache = MemoryCacheService.Get<MatchesResponse>("matchesList");
 
-            if (matches is not null)
+            if (matchesCache is not null)
             {
-                return Result<MatchesResponse>.Success(matches.Data);
+                return Result<MatchesResponse>.Success(matchesCache);
             }
 
-            matches = await WorldCupServices.GetListMatchAsync(cancellationToken);
+            matchesService = await WorldCupServices.GetListMatchAsync(cancellationToken);
 
-            return matches;
+            return matchesService;
         }
     }
 }
