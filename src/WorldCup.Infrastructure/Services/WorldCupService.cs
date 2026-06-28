@@ -7,7 +7,7 @@ using WorldCup.Domain.Models;
 
 namespace WorldCup.Infrastructure.Services
 {
-    public class WorldCupService(IHttpClientFactory httpClientFactory, IMemoryCacheService memoryCacheService) : IWorldCupServices
+    public class WorldCupService(IHttpClientFactory httpClientFactory) : IWorldCupServices
     {
         public HttpClient httpClient = httpClientFactory.CreateClient("worldcup");
 
