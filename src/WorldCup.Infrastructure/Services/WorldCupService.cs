@@ -7,7 +7,7 @@ using WorldCup.Domain.Models;
 
 namespace WorldCup.Infrastructure.Services
 {
-    public class WorldCupService(IHttpClientFactory httpClientFactory) : IWorldCupServices
+    public class WorldCupService(IHttpClientFactory httpClientFactory, IMemoryCacheService MemoryCacheService) : IWorldCupServices
     {
         public HttpClient httpClient = httpClientFactory.CreateClient("worldcup");
 
@@ -35,6 +35,8 @@ namespace WorldCup.Infrastructure.Services
             }
 
             MatchesResponse matches = JsonConvert.DeserializeObject<MatchesResponse>(content)!;
+
+            MemoryCacheService.Set<MatchesResponse>("matchesList", matches);
 
             return Result<MatchesResponse>.Success(matches);
         }

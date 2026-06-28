@@ -19,8 +19,6 @@ namespace WorldCup.Application.UseCases.Queries
 
             matches = await WorldCupServices.GetListMatchAsync(cancellationToken);
 
-            MemoryCacheService.Set<Result<MatchesResponse>>("matchesList", matches);
-
             return matches;
         }
     }
