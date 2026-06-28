@@ -7,7 +7,7 @@ using WorldCup.Domain.Models;
 
 namespace WorldCup.Infrastructure.Services
 {
-    public class WorldCupService(IHttpClientFactory httpClientFactory, IMemoryCacheService memoryCacheService) : IWorldCupServices
+    public class WorldCupService(IHttpClientFactory httpClientFactory) : IWorldCupServices
     {
         public HttpClient httpClient = httpClientFactory.CreateClient("worldcup");
 
@@ -19,15 +19,6 @@ namespace WorldCup.Infrastructure.Services
 
         public async Task<Result<MatchesResponse>> GetListMatchAsync(CancellationToken cancellationToken)
         {
-            MatchesResponse? matches;
-
-            matches = memoryCacheService.Get<MatchesResponse>("matchesList");
-
-            if (matches is not null)
-            {
-                return Result<MatchesResponse>.Success(matches);
-            }
-
             Url url = httpClient.BaseAddress
                 .AppendPathSegment("get")
                 .AppendPathSegment("games");
@@ -43,9 +34,7 @@ namespace WorldCup.Infrastructure.Services
                 return Result<MatchesResponse>.Failure(MatchesErrors.GetMatchesError);
             }
 
-            matches = JsonConvert.DeserializeObject<MatchesResponse>(content)!;
-
-            memoryCacheService.Set<MatchesResponse>("matchesList", matches);
+            MatchesResponse matches = JsonConvert.DeserializeObject<MatchesResponse>(content)!;
 
             return Result<MatchesResponse>.Success(matches);
         }
