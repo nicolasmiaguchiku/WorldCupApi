@@ -10,10 +10,12 @@
 		<PackageReference Include="LiteBus" Version="3.1.0" />
 		<PackageReference Include="LiteBus.Commands.Extensions.MicrosoftDependencyInjection" Version="3.1.0" />
 		<PackageReference Include="LiteBus.Queries.Extensions.MicrosoftDependencyInjection" Version="3.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\WorldCup.Domain\WorldCup.Domain.csproj" />
+		<ProjectReference Include="..\WorldCup.Domain\WorldCup.Domain.csproj" />
+		<ProjectReference Include="..\WorldCup.Infrastructure\WorldCup.Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>
