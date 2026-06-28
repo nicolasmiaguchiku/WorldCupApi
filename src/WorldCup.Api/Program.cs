@@ -15,6 +15,7 @@ Settings applicationSettings = builder.Configuration.GetApplicationSettings(buil
 builder.Services
     .AddServices()
     .AddMediator()
+    .AddMemoryCacheService()
     .AddApiSpecification()
     .AddHttpClients(applicationSettings.WorldCupSettings)
     .AddControllers();
